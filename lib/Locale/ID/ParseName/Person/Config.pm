@@ -1,6 +1,6 @@
 package Lingua::ID::NameParse::Config;
 
-use Any::Moose;
+use Moo;
 
 =head1 NAME
 
@@ -27,18 +27,12 @@ L<Lingua::ID::GenderFromName>.
 
 =cut
 
-has gender_from_first_name => (is => 'rw', default => 0);
+has gender_from_first_name => (is => 'rw', default => sub{0});
 
 =head1 SEE ALSO
 
 L<Lingua::ID::NameParse>
 
-=head1 AUTHOR
-
-=head1 COPYRIGHT & LICENSE
-
 =cut
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

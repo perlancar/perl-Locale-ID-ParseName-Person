@@ -1,7 +1,7 @@
 package Lingua::ID::NameParse;
 # ABSTRACT: Parse and extract information from Indonesian names
 
-use Any::Moose;
+use Moo;
 
 my @salutations = (
     { pat => 'bapak|bpk|bp|tuan|tn'  , sex => 'M' },
@@ -358,8 +358,7 @@ sub parse {
 
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
+1;
 __END__
 =pod
 
